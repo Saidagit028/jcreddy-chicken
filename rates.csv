@@ -1,4 +1,4 @@
-id,name,rate_per_kg,out_of_stock
+id,name,rate_per_kg_or_egg,out_of_stock
 gizzard,Gizzards,0,no
 liver,Chicken Liver,0,no
 lolly,Lollipop Chicken,0,no
@@ -8,3 +8,6 @@ boneless,Boneless Chicken,0,no
 skinless,Skinless Chicken,0,no
 roast,Whole Chicken (Dressed),0,no
 broiler,Broiler Chicken (With Skin),0,no
+brown,Brown Eggs (per egg),0,no
+white,White Eggs (per egg),0,no
+live,Live Chicken (per kg),0,no
