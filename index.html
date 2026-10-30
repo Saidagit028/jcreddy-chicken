@@ -105,7 +105,7 @@ function sheet(){const s=$('sheet');if(!cart.length){s.innerHTML=`<button class=
   const lines=cart.map(c=>{const i=D.items.find(x=>x.id===c.id);return `• ${i.en}: ${c.qty} kg x ${c.rate} = ₹${c.qty*c.rate}`}).join('\n');
   const m=`🐔 NEW ORDER - J.C. Reddy’s Chicken\nName: ${n}\nPhone: ${p}\nAddress: ${a}\nLandmark: ${$('cl').value}\n\n${lines}\n\nTotal: ₹${tot()} (FREE Delivery)\nDelivery: ${$('ct').value}\nNotes: ${$('cx').value||'-'}\n📍 Location: ${loc||'not shared'}\nDate: ${new Date().toLocaleString('en-IN')}`;
   window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(m),'_blank');logOrder(n,p,a,tot());cart=[];save();topbar();s.innerHTML=`<button class="x" onclick="$('dr').classList.remove('on')">×</button><h2>✓</h2><p>${t('thanks')}</p>`}}
-const SHEET_URL='PASTE_YOUR_PUBLISHED_CSV_LINK_HERE';
+const SHEET_URL='https://docs.google.com/spreadsheets/d/e/2PACX-1vQiAlbEAXAYQbSBrGLcmGbCY6Ndet6SH61AvgU_fvqWXNj77KJ6UTPgmiUh7d9E-s4m3Xaxbq4Tjqdg/pub?output=csv';
 async function loadRates(){try{
  if(SHEET_URL.startsWith('PASTE'))throw 0;
  const r=await fetch(SHEET_URL+(SHEET_URL.includes('?')?'&':'?')+'t='+Date.now());if(!r.ok)throw 0;
